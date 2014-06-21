@@ -15,6 +15,12 @@
       templateUrl: 'partials/book-genres.html'
     };
   });
+  app.directive('bookCover', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/book-cover.html'
+    };
+  });
 
   var genres = [ 'fable', 'fantasy', 'fiction', 'folklore', 'horror', 'humor', 'legend', 'metafiction', 'mystery', 'mythology', 'non-fiction', 'poetry' ];
   var books = [
