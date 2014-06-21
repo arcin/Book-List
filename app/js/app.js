@@ -4,9 +4,16 @@
 
   // Declare app level module which depends on filters, and services
   var app = angular.module('readingList', []);
+
   app.controller('ReadingListController', function(){
     this.genres = genres;
     this.books = books;
+  });
+  app.directive('bookGenres', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/book-genres.html'
+    };
   });
 
   var genres = [ 'fable', 'fantasy', 'fiction', 'folklore', 'horror', 'humor', 'legend', 'metafiction', 'mystery', 'mythology', 'non-fiction', 'poetry' ];
